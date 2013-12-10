@@ -45,14 +45,6 @@ No other frameworks required.
 
     [menuView show];
 
-### To stop animating: ###
-
-	[loadingView stopAnimating];
-
-### To Check view is animating: ###
-
-	[loadingView isAnimating];
-
 
 ## How it looks ##
 
