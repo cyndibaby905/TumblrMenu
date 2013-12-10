@@ -9,9 +9,14 @@ Easy to drop into your project.
 You can add as many items as you want, the CHTumblrMenuView will layout them automatically.
 
 
+## Requirements ##
+
+CHTumblrMenuView requires Xcode 5, targeting either iOS 5.0 and above, ARC-enabled.
+
+
 ## How to use ##
 	
-Drag CHTumblrMenuView.h amd CHTumblrMenuView.m files to your project. This class is ARC-enabled. You must build it with ARC.
+Drag CHTumblrMenuView.h amd CHTumblrMenuView.m files to your project. 
 
 No other frameworks required.
 
