@@ -1,0 +1,564 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7760606E1855F40B005424C0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7760606D1855F40B005424C0 /* Foundation.framework */; };
+		776060701855F40B005424C0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7760606F1855F40B005424C0 /* CoreGraphics.framework */; };
+		776060721855F40B005424C0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 776060711855F40B005424C0 /* UIKit.framework */; };
+		776060781855F40B005424C0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 776060761855F40B005424C0 /* InfoPlist.strings */; };
+		7760607A1855F40B005424C0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 776060791855F40B005424C0 /* main.m */; };
+		7760607E1855F40B005424C0 /* CHAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7760607D1855F40B005424C0 /* CHAppDelegate.m */; };
+		776060871855F40B005424C0 /* CHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 776060861855F40B005424C0 /* CHViewController.m */; };
+		776060891855F40B005424C0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 776060881855F40B005424C0 /* Images.xcassets */; };
+		776060901855F40B005424C0 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7760608F1855F40B005424C0 /* XCTest.framework */; };
+		776060911855F40B005424C0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7760606D1855F40B005424C0 /* Foundation.framework */; };
+		776060921855F40B005424C0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 776060711855F40B005424C0 /* UIKit.framework */; };
+		7760609A1855F40B005424C0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 776060981855F40B005424C0 /* InfoPlist.strings */; };
+		7760609C1855F40B005424C0 /* TumblrMenuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7760609B1855F40B005424C0 /* TumblrMenuTests.m */; };
+		776060B41855F43F005424C0 /* post_type_bubble_chat.png in Resources */ = {isa = PBXBuildFile; fileRef = 776060A61855F43F005424C0 /* post_type_bubble_chat.png */; };
+		776060B51855F43F005424C0 /* post_type_bubble_chat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 776060A71855F43F005424C0 /* post_type_bubble_chat@2x.png */; };
+		776060B61855F43F005424C0 /* post_type_bubble_link.png in Resources */ = {isa = PBXBuildFile; fileRef = 776060A81855F43F005424C0 /* post_type_bubble_link.png */; };
+		776060B71855F43F005424C0 /* post_type_bubble_link@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 776060A91855F43F005424C0 /* post_type_bubble_link@2x.png */; };
+		776060B81855F43F005424C0 /* post_type_bubble_photo.png in Resources */ = {isa = PBXBuildFile; fileRef = 776060AA1855F43F005424C0 /* post_type_bubble_photo.png */; };
+		776060B91855F43F005424C0 /* post_type_bubble_photo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 776060AB1855F43F005424C0 /* post_type_bubble_photo@2x.png */; };
+		776060BA1855F43F005424C0 /* post_type_bubble_quote.png in Resources */ = {isa = PBXBuildFile; fileRef = 776060AC1855F43F005424C0 /* post_type_bubble_quote.png */; };
+		776060BB1855F43F005424C0 /* post_type_bubble_quote@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 776060AD1855F43F005424C0 /* post_type_bubble_quote@2x.png */; };
+		776060BC1855F43F005424C0 /* post_type_bubble_text.png in Resources */ = {isa = PBXBuildFile; fileRef = 776060AE1855F43F005424C0 /* post_type_bubble_text.png */; };
+		776060BD1855F43F005424C0 /* post_type_bubble_text@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 776060AF1855F43F005424C0 /* post_type_bubble_text@2x.png */; };
+		776060BE1855F43F005424C0 /* post_type_bubble_video.png in Resources */ = {isa = PBXBuildFile; fileRef = 776060B01855F43F005424C0 /* post_type_bubble_video.png */; };
+		776060BF1855F43F005424C0 /* post_type_bubble_video@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 776060B11855F43F005424C0 /* post_type_bubble_video@2x.png */; };
+		776060D31855FCB3005424C0 /* modal_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 776060D11855FCB3005424C0 /* modal_background.png */; };
+		776060D41855FCB3005424C0 /* modal_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 776060D21855FCB3005424C0 /* modal_background@2x.png */; };
+		776060D718573F01005424C0 /* tab_bar_button_compose_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 776060D518573F01005424C0 /* tab_bar_button_compose_selected.png */; };
+		776060D818573F01005424C0 /* tab_bar_button_compose_unselected.png in Resources */ = {isa = PBXBuildFile; fileRef = 776060D618573F01005424C0 /* tab_bar_button_compose_unselected.png */; };
+		776060DB18573F4F005424C0 /* tab_bar_button_compose_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 776060D918573F4F005424C0 /* tab_bar_button_compose_selected@2x.png */; };
+		776060DC18573F4F005424C0 /* tab_bar_button_compose_unselected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 776060DA18573F4F005424C0 /* tab_bar_button_compose_unselected@2x.png */; };
+		776060E018574380005424C0 /* CHTumblrMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 776060DF18574380005424C0 /* CHTumblrMenuView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		776060931855F40B005424C0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 776060621855F40B005424C0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 776060691855F40B005424C0;
+			remoteInfo = TumblrMenu;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7760606A1855F40B005424C0 /* TumblrMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TumblrMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7760606D1855F40B005424C0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7760606F1855F40B005424C0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		776060711855F40B005424C0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		776060751855F40B005424C0 /* TumblrMenu-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TumblrMenu-Info.plist"; sourceTree = "<group>"; };
+		776060771855F40B005424C0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		776060791855F40B005424C0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7760607B1855F40B005424C0 /* TumblrMenu-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TumblrMenu-Prefix.pch"; sourceTree = "<group>"; };
+		7760607C1855F40B005424C0 /* CHAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHAppDelegate.h; sourceTree = "<group>"; };
+		7760607D1855F40B005424C0 /* CHAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CHAppDelegate.m; sourceTree = "<group>"; };
+		776060851855F40B005424C0 /* CHViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHViewController.h; sourceTree = "<group>"; };
+		776060861855F40B005424C0 /* CHViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CHViewController.m; sourceTree = "<group>"; };
+		776060881855F40B005424C0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		7760608E1855F40B005424C0 /* TumblrMenuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TumblrMenuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7760608F1855F40B005424C0 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		776060971855F40B005424C0 /* TumblrMenuTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TumblrMenuTests-Info.plist"; sourceTree = "<group>"; };
+		776060991855F40B005424C0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7760609B1855F40B005424C0 /* TumblrMenuTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TumblrMenuTests.m; sourceTree = "<group>"; };
+		776060A61855F43F005424C0 /* post_type_bubble_chat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = post_type_bubble_chat.png; sourceTree = "<group>"; };
+		776060A71855F43F005424C0 /* post_type_bubble_chat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "post_type_bubble_chat@2x.png"; sourceTree = "<group>"; };
+		776060A81855F43F005424C0 /* post_type_bubble_link.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = post_type_bubble_link.png; sourceTree = "<group>"; };
+		776060A91855F43F005424C0 /* post_type_bubble_link@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "post_type_bubble_link@2x.png"; sourceTree = "<group>"; };
+		776060AA1855F43F005424C0 /* post_type_bubble_photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = post_type_bubble_photo.png; sourceTree = "<group>"; };
+		776060AB1855F43F005424C0 /* post_type_bubble_photo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "post_type_bubble_photo@2x.png"; sourceTree = "<group>"; };
+		776060AC1855F43F005424C0 /* post_type_bubble_quote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = post_type_bubble_quote.png; sourceTree = "<group>"; };
+		776060AD1855F43F005424C0 /* post_type_bubble_quote@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "post_type_bubble_quote@2x.png"; sourceTree = "<group>"; };
+		776060AE1855F43F005424C0 /* post_type_bubble_text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = post_type_bubble_text.png; sourceTree = "<group>"; };
+		776060AF1855F43F005424C0 /* post_type_bubble_text@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "post_type_bubble_text@2x.png"; sourceTree = "<group>"; };
+		776060B01855F43F005424C0 /* post_type_bubble_video.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = post_type_bubble_video.png; sourceTree = "<group>"; };
+		776060B11855F43F005424C0 /* post_type_bubble_video@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "post_type_bubble_video@2x.png"; sourceTree = "<group>"; };
+		776060D11855FCB3005424C0 /* modal_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = modal_background.png; sourceTree = "<group>"; };
+		776060D21855FCB3005424C0 /* modal_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "modal_background@2x.png"; sourceTree = "<group>"; };
+		776060D518573F01005424C0 /* tab_bar_button_compose_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_bar_button_compose_selected.png; sourceTree = "<group>"; };
+		776060D618573F01005424C0 /* tab_bar_button_compose_unselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_bar_button_compose_unselected.png; sourceTree = "<group>"; };
+		776060D918573F4F005424C0 /* tab_bar_button_compose_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_bar_button_compose_selected@2x.png"; sourceTree = "<group>"; };
+		776060DA18573F4F005424C0 /* tab_bar_button_compose_unselected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_bar_button_compose_unselected@2x.png"; sourceTree = "<group>"; };
+		776060DE18574380005424C0 /* CHTumblrMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTumblrMenuView.h; sourceTree = "<group>"; };
+		776060DF18574380005424C0 /* CHTumblrMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHTumblrMenuView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		776060671855F40B005424C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				776060701855F40B005424C0 /* CoreGraphics.framework in Frameworks */,
+				776060721855F40B005424C0 /* UIKit.framework in Frameworks */,
+				7760606E1855F40B005424C0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7760608B1855F40B005424C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				776060901855F40B005424C0 /* XCTest.framework in Frameworks */,
+				776060921855F40B005424C0 /* UIKit.framework in Frameworks */,
+				776060911855F40B005424C0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		776060611855F40B005424C0 = {
+			isa = PBXGroup;
+			children = (
+				776060731855F40B005424C0 /* TumblrMenu */,
+				776060951855F40B005424C0 /* TumblrMenuTests */,
+				7760606C1855F40B005424C0 /* Frameworks */,
+				7760606B1855F40B005424C0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7760606B1855F40B005424C0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7760606A1855F40B005424C0 /* TumblrMenu.app */,
+				7760608E1855F40B005424C0 /* TumblrMenuTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7760606C1855F40B005424C0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7760606D1855F40B005424C0 /* Foundation.framework */,
+				7760606F1855F40B005424C0 /* CoreGraphics.framework */,
+				776060711855F40B005424C0 /* UIKit.framework */,
+				7760608F1855F40B005424C0 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		776060731855F40B005424C0 /* TumblrMenu */ = {
+			isa = PBXGroup;
+			children = (
+				776060DD18574380005424C0 /* TumblrMenu */,
+				776060A51855F43F005424C0 /* Resources */,
+				7760607C1855F40B005424C0 /* CHAppDelegate.h */,
+				7760607D1855F40B005424C0 /* CHAppDelegate.m */,
+				776060851855F40B005424C0 /* CHViewController.h */,
+				776060861855F40B005424C0 /* CHViewController.m */,
+				776060881855F40B005424C0 /* Images.xcassets */,
+				776060741855F40B005424C0 /* Supporting Files */,
+			);
+			path = TumblrMenu;
+			sourceTree = "<group>";
+		};
+		776060741855F40B005424C0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				776060751855F40B005424C0 /* TumblrMenu-Info.plist */,
+				776060761855F40B005424C0 /* InfoPlist.strings */,
+				776060791855F40B005424C0 /* main.m */,
+				7760607B1855F40B005424C0 /* TumblrMenu-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		776060951855F40B005424C0 /* TumblrMenuTests */ = {
+			isa = PBXGroup;
+			children = (
+				7760609B1855F40B005424C0 /* TumblrMenuTests.m */,
+				776060961855F40B005424C0 /* Supporting Files */,
+			);
+			path = TumblrMenuTests;
+			sourceTree = "<group>";
+		};
+		776060961855F40B005424C0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				776060971855F40B005424C0 /* TumblrMenuTests-Info.plist */,
+				776060981855F40B005424C0 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		776060A51855F43F005424C0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				776060D918573F4F005424C0 /* tab_bar_button_compose_selected@2x.png */,
+				776060DA18573F4F005424C0 /* tab_bar_button_compose_unselected@2x.png */,
+				776060D518573F01005424C0 /* tab_bar_button_compose_selected.png */,
+				776060D618573F01005424C0 /* tab_bar_button_compose_unselected.png */,
+				776060D11855FCB3005424C0 /* modal_background.png */,
+				776060D21855FCB3005424C0 /* modal_background@2x.png */,
+				776060A61855F43F005424C0 /* post_type_bubble_chat.png */,
+				776060A71855F43F005424C0 /* post_type_bubble_chat@2x.png */,
+				776060A81855F43F005424C0 /* post_type_bubble_link.png */,
+				776060A91855F43F005424C0 /* post_type_bubble_link@2x.png */,
+				776060AA1855F43F005424C0 /* post_type_bubble_photo.png */,
+				776060AB1855F43F005424C0 /* post_type_bubble_photo@2x.png */,
+				776060AC1855F43F005424C0 /* post_type_bubble_quote.png */,
+				776060AD1855F43F005424C0 /* post_type_bubble_quote@2x.png */,
+				776060AE1855F43F005424C0 /* post_type_bubble_text.png */,
+				776060AF1855F43F005424C0 /* post_type_bubble_text@2x.png */,
+				776060B01855F43F005424C0 /* post_type_bubble_video.png */,
+				776060B11855F43F005424C0 /* post_type_bubble_video@2x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		776060DD18574380005424C0 /* TumblrMenu */ = {
+			isa = PBXGroup;
+			children = (
+				776060DE18574380005424C0 /* CHTumblrMenuView.h */,
+				776060DF18574380005424C0 /* CHTumblrMenuView.m */,
+			);
+			path = TumblrMenu;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		776060691855F40B005424C0 /* TumblrMenu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7760609F1855F40B005424C0 /* Build configuration list for PBXNativeTarget "TumblrMenu" */;
+			buildPhases = (
+				776060661855F40B005424C0 /* Sources */,
+				776060671855F40B005424C0 /* Frameworks */,
+				776060681855F40B005424C0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TumblrMenu;
+			productName = TumblrMenu;
+			productReference = 7760606A1855F40B005424C0 /* TumblrMenu.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7760608D1855F40B005424C0 /* TumblrMenuTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 776060A21855F40B005424C0 /* Build configuration list for PBXNativeTarget "TumblrMenuTests" */;
+			buildPhases = (
+				7760608A1855F40B005424C0 /* Sources */,
+				7760608B1855F40B005424C0 /* Frameworks */,
+				7760608C1855F40B005424C0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				776060941855F40B005424C0 /* PBXTargetDependency */,
+			);
+			name = TumblrMenuTests;
+			productName = TumblrMenuTests;
+			productReference = 7760608E1855F40B005424C0 /* TumblrMenuTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		776060621855F40B005424C0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = CH;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = HangChen;
+				TargetAttributes = {
+					7760608D1855F40B005424C0 = {
+						TestTargetID = 776060691855F40B005424C0;
+					};
+				};
+			};
+			buildConfigurationList = 776060651855F40B005424C0 /* Build configuration list for PBXProject "TumblrMenu" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 776060611855F40B005424C0;
+			productRefGroup = 7760606B1855F40B005424C0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				776060691855F40B005424C0 /* TumblrMenu */,
+				7760608D1855F40B005424C0 /* TumblrMenuTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		776060681855F40B005424C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				776060B51855F43F005424C0 /* post_type_bubble_chat@2x.png in Resources */,
+				776060D41855FCB3005424C0 /* modal_background@2x.png in Resources */,
+				776060B81855F43F005424C0 /* post_type_bubble_photo.png in Resources */,
+				776060B91855F43F005424C0 /* post_type_bubble_photo@2x.png in Resources */,
+				776060BF1855F43F005424C0 /* post_type_bubble_video@2x.png in Resources */,
+				776060D31855FCB3005424C0 /* modal_background.png in Resources */,
+				776060BA1855F43F005424C0 /* post_type_bubble_quote.png in Resources */,
+				776060BD1855F43F005424C0 /* post_type_bubble_text@2x.png in Resources */,
+				776060B41855F43F005424C0 /* post_type_bubble_chat.png in Resources */,
+				776060D818573F01005424C0 /* tab_bar_button_compose_unselected.png in Resources */,
+				776060BC1855F43F005424C0 /* post_type_bubble_text.png in Resources */,
+				776060891855F40B005424C0 /* Images.xcassets in Resources */,
+				776060DB18573F4F005424C0 /* tab_bar_button_compose_selected@2x.png in Resources */,
+				776060B61855F43F005424C0 /* post_type_bubble_link.png in Resources */,
+				776060B71855F43F005424C0 /* post_type_bubble_link@2x.png in Resources */,
+				776060D718573F01005424C0 /* tab_bar_button_compose_selected.png in Resources */,
+				776060781855F40B005424C0 /* InfoPlist.strings in Resources */,
+				776060DC18573F4F005424C0 /* tab_bar_button_compose_unselected@2x.png in Resources */,
+				776060BB1855F43F005424C0 /* post_type_bubble_quote@2x.png in Resources */,
+				776060BE1855F43F005424C0 /* post_type_bubble_video.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7760608C1855F40B005424C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7760609A1855F40B005424C0 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		776060661855F40B005424C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7760607A1855F40B005424C0 /* main.m in Sources */,
+				7760607E1855F40B005424C0 /* CHAppDelegate.m in Sources */,
+				776060E018574380005424C0 /* CHTumblrMenuView.m in Sources */,
+				776060871855F40B005424C0 /* CHViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7760608A1855F40B005424C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7760609C1855F40B005424C0 /* TumblrMenuTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		776060941855F40B005424C0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 776060691855F40B005424C0 /* TumblrMenu */;
+			targetProxy = 776060931855F40B005424C0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		776060761855F40B005424C0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				776060771855F40B005424C0 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		776060981855F40B005424C0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				776060991855F40B005424C0 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7760609D1855F40B005424C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7760609E1855F40B005424C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		776060A01855F40B005424C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TumblrMenu/TumblrMenu-Prefix.pch";
+				INFOPLIST_FILE = "TumblrMenu/TumblrMenu-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		776060A11855F40B005424C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TumblrMenu/TumblrMenu-Prefix.pch";
+				INFOPLIST_FILE = "TumblrMenu/TumblrMenu-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		776060A31855F40B005424C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TumblrMenu.app/TumblrMenu";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TumblrMenu/TumblrMenu-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "TumblrMenuTests/TumblrMenuTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		776060A41855F40B005424C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TumblrMenu.app/TumblrMenu";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TumblrMenu/TumblrMenu-Prefix.pch";
+				INFOPLIST_FILE = "TumblrMenuTests/TumblrMenuTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		776060651855F40B005424C0 /* Build configuration list for PBXProject "TumblrMenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7760609D1855F40B005424C0 /* Debug */,
+				7760609E1855F40B005424C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7760609F1855F40B005424C0 /* Build configuration list for PBXNativeTarget "TumblrMenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				776060A01855F40B005424C0 /* Debug */,
+				776060A11855F40B005424C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		776060A21855F40B005424C0 /* Build configuration list for PBXNativeTarget "TumblrMenuTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				776060A31855F40B005424C0 /* Debug */,
+				776060A41855F40B005424C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 776060621855F40B005424C0 /* Project object */;
+}
