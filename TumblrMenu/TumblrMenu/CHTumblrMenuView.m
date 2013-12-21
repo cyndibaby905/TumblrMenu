@@ -34,6 +34,7 @@
 #define CHTumblrMenuViewAnimationTime 0.36
 #define CHTumblrMenuViewAnimationInterval (CHTumblrMenuViewAnimationTime / 5)
 
+#define TumblrBlue [UIColor colorWithRed:45/255.0f green:68/255.0f blue:94/255.0f alpha:1.0]
 
 @interface CHTumblrMenuItemButton : UIControl
 - (id)initWithTitle:(NSString*)title andIcon:(UIImage*)icon andSelectedBlock:(CHTumblrMenuViewSelectedBlock)block;
@@ -78,7 +79,7 @@
     UIImageView *backgroundView_;
     NSMutableArray *buttons_;
 }
-
+@synthesize backgroundImgView = backgroundView_;
 
 
 - (id)initWithFrame:(CGRect)frame
@@ -91,7 +92,7 @@
         [self addGestureRecognizer:ges];
         self.backgroundColor = [UIColor clearColor];
         backgroundView_ = [[UIImageView alloc] initWithFrame:self.bounds];
-        backgroundView_.image = [[UIImage imageNamed:@"modal_background.png"] stretchableImageWithLeftCapWidth:10 topCapHeight:6];
+        backgroundView_.backgroundColor = TumblrBlue;
         backgroundView_.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
         [self addSubview:backgroundView_];
         buttons_ = [[NSMutableArray alloc] initWithCapacity:6];

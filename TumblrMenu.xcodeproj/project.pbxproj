@@ -32,8 +32,6 @@
 		776060BD1855F43F005424C0 /* post_type_bubble_text@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 776060AF1855F43F005424C0 /* post_type_bubble_text@2x.png */; };
 		776060BE1855F43F005424C0 /* post_type_bubble_video.png in Resources */ = {isa = PBXBuildFile; fileRef = 776060B01855F43F005424C0 /* post_type_bubble_video.png */; };
 		776060BF1855F43F005424C0 /* post_type_bubble_video@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 776060B11855F43F005424C0 /* post_type_bubble_video@2x.png */; };
-		776060D31855FCB3005424C0 /* modal_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 776060D11855FCB3005424C0 /* modal_background.png */; };
-		776060D41855FCB3005424C0 /* modal_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 776060D21855FCB3005424C0 /* modal_background@2x.png */; };
 		776060D718573F01005424C0 /* tab_bar_button_compose_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 776060D518573F01005424C0 /* tab_bar_button_compose_selected.png */; };
 		776060D818573F01005424C0 /* tab_bar_button_compose_unselected.png in Resources */ = {isa = PBXBuildFile; fileRef = 776060D618573F01005424C0 /* tab_bar_button_compose_unselected.png */; };
 		776060DB18573F4F005424C0 /* tab_bar_button_compose_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 776060D918573F4F005424C0 /* tab_bar_button_compose_selected@2x.png */; };
@@ -82,8 +80,6 @@
 		776060AF1855F43F005424C0 /* post_type_bubble_text@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "post_type_bubble_text@2x.png"; sourceTree = "<group>"; };
 		776060B01855F43F005424C0 /* post_type_bubble_video.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = post_type_bubble_video.png; sourceTree = "<group>"; };
 		776060B11855F43F005424C0 /* post_type_bubble_video@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "post_type_bubble_video@2x.png"; sourceTree = "<group>"; };
-		776060D11855FCB3005424C0 /* modal_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = modal_background.png; sourceTree = "<group>"; };
-		776060D21855FCB3005424C0 /* modal_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "modal_background@2x.png"; sourceTree = "<group>"; };
 		776060D518573F01005424C0 /* tab_bar_button_compose_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_bar_button_compose_selected.png; sourceTree = "<group>"; };
 		776060D618573F01005424C0 /* tab_bar_button_compose_unselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_bar_button_compose_unselected.png; sourceTree = "<group>"; };
 		776060D918573F4F005424C0 /* tab_bar_button_compose_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_bar_button_compose_selected@2x.png"; sourceTree = "<group>"; };
@@ -197,8 +193,6 @@
 				776060DA18573F4F005424C0 /* tab_bar_button_compose_unselected@2x.png */,
 				776060D518573F01005424C0 /* tab_bar_button_compose_selected.png */,
 				776060D618573F01005424C0 /* tab_bar_button_compose_unselected.png */,
-				776060D11855FCB3005424C0 /* modal_background.png */,
-				776060D21855FCB3005424C0 /* modal_background@2x.png */,
 				776060A61855F43F005424C0 /* post_type_bubble_chat.png */,
 				776060A71855F43F005424C0 /* post_type_bubble_chat@2x.png */,
 				776060A81855F43F005424C0 /* post_type_bubble_link.png */,
@@ -302,11 +296,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				776060B51855F43F005424C0 /* post_type_bubble_chat@2x.png in Resources */,
-				776060D41855FCB3005424C0 /* modal_background@2x.png in Resources */,
 				776060B81855F43F005424C0 /* post_type_bubble_photo.png in Resources */,
 				776060B91855F43F005424C0 /* post_type_bubble_photo@2x.png in Resources */,
 				776060BF1855F43F005424C0 /* post_type_bubble_video@2x.png in Resources */,
-				776060D31855FCB3005424C0 /* modal_background.png in Resources */,
 				776060BA1855F43F005424C0 /* post_type_bubble_quote.png in Resources */,
 				776060BD1855F43F005424C0 /* post_type_bubble_text@2x.png in Resources */,
 				776060B41855F43F005424C0 /* post_type_bubble_chat.png in Resources */,
