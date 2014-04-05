@@ -36,42 +36,34 @@
 
 #define TumblrBlue [UIColor colorWithRed:45/255.0f green:68/255.0f blue:94/255.0f alpha:1.0]
 
-@interface CHTumblrMenuItemButton : UIControl
-- (id)initWithTitle:(NSString*)title andIcon:(UIImage*)icon andSelectedBlock:(CHTumblrMenuViewSelectedBlock)block;
+@interface CHTumblrMenuItemButton : UIButton
++ (id)TumblrMenuItemButtonWithTitle:(NSString*)title andIcon:(UIImage*)icon andSelectedBlock:(CHTumblrMenuViewSelectedBlock)block;
 @property(nonatomic,copy)CHTumblrMenuViewSelectedBlock selectedBlock;
 @end
 
 @implementation CHTumblrMenuItemButton
-{
-    UIImageView *iconView_;
-    UILabel *titleLabel_;
-}
-- (id)initWithTitle:(NSString*)title andIcon:(UIImage*)icon andSelectedBlock:(CHTumblrMenuViewSelectedBlock)block
-{
-    self = [super init];
-    if (self) {
-        iconView_ = [UIImageView new];
-        iconView_.image = icon;
-        titleLabel_ = [UILabel new];
-        titleLabel_.textAlignment = NSTextAlignmentCenter;
-        titleLabel_.backgroundColor = [UIColor clearColor];
-        titleLabel_.textColor = [UIColor whiteColor];
-        titleLabel_.text = title;
-        _selectedBlock = block;
-        [self addSubview:iconView_];
-        [self addSubview:titleLabel_];
-    }
-    return self;
-}
 
-- (void)setFrame:(CGRect)frame
++ (id)TumblrMenuItemButtonWithTitle:(NSString*)title andIcon:(UIImage*)icon andSelectedBlock:(CHTumblrMenuViewSelectedBlock)block
 {
-    [super setFrame:frame];
-    iconView_.frame = CGRectMake(0, 0, CHTumblrMenuViewImageHeight, CHTumblrMenuViewImageHeight);
-    titleLabel_.frame = CGRectMake(0, CHTumblrMenuViewImageHeight, CHTumblrMenuViewImageHeight, CHTumblrMenuViewTitleHeight);
+    CHTumblrMenuItemButton *button = [CHTumblrMenuItemButton buttonWithType:UIButtonTypeCustom];
+    [button setImage:icon forState:UIControlStateNormal];
+    
+    [button setTitle:title forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    button.titleLabel.textAlignment = NSTextAlignmentCenter;
+    
+    button.selectedBlock = block;
+ 
+    return button;
 }
 
 
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    self.imageView.frame = CGRectMake(0, 0, CHTumblrMenuViewImageHeight, CHTumblrMenuViewImageHeight);
+    self.titleLabel.frame = CGRectMake(0, CHTumblrMenuViewImageHeight, CHTumblrMenuViewImageHeight, CHTumblrMenuViewTitleHeight);
+}
 @end
 
 @implementation CHTumblrMenuView
@@ -104,7 +96,7 @@
 
 - (void)addMenuItemWithTitle:(NSString*)title andIcon:(UIImage*)icon andSelectedBlock:(CHTumblrMenuViewSelectedBlock)block
 {
-    CHTumblrMenuItemButton *button = [[CHTumblrMenuItemButton alloc] initWithTitle:title andIcon:icon andSelectedBlock:block];
+    CHTumblrMenuItemButton *button = [CHTumblrMenuItemButton TumblrMenuItemButtonWithTitle:title andIcon:icon andSelectedBlock:block];
     
     [button addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:button];
