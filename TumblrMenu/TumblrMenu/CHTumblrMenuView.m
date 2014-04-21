@@ -25,10 +25,11 @@
 
 #import "CHTumblrMenuView.h"
 #define CHTumblrMenuViewTag 1999
+#define CHTumblrMenuViewDismissTag 1998
 #define CHTumblrMenuViewImageHeight 90
-#define CHTumblrMenuViewTitleHeight 20
-#define CHTumblrMenuViewVerticalPadding 10
-#define CHTumblrMenuViewHorizontalMargin 10
+#define CHTumblrMenuViewTitleHeight 50
+#define CHTumblrMenuViewVerticalPadding (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ? 40.f : 10.f)
+#define CHTumblrMenuViewHorizontalMargin (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ? 80.f : 10.f)
 #define CHTumblrMenuViewRriseAnimationID @"CHTumblrMenuViewRriseAnimationID"
 #define CHTumblrMenuViewDismissAnimationID @"CHTumblrMenuViewDismissAnimationID"
 #define CHTumblrMenuViewAnimationTime 0.36
@@ -53,7 +54,7 @@
     button.titleLabel.textAlignment = NSTextAlignmentCenter;
     
     button.selectedBlock = block;
- 
+    
     return button;
 }
 
@@ -64,6 +65,12 @@
     self.imageView.frame = CGRectMake(0, 0, CHTumblrMenuViewImageHeight, CHTumblrMenuViewImageHeight);
     self.titleLabel.frame = CGRectMake(0, CHTumblrMenuViewImageHeight, CHTumblrMenuViewImageHeight, CHTumblrMenuViewTitleHeight);
 }
+@end
+
+@interface CHTumblrMenuView()
+- (void)registerForNotifications;
+- (void)unregisterFromNotifications;
+- (void)deviceOrientationDidChange:(NSNotification *)notification;
 @end
 
 @implementation CHTumblrMenuView
@@ -85,10 +92,13 @@
         self.backgroundColor = [UIColor clearColor];
         backgroundView_ = [[UIImageView alloc] initWithFrame:self.bounds];
         backgroundView_.backgroundColor = TumblrBlue;
+        backgroundView_.alpha = 0.9f;
         backgroundView_.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
         [self addSubview:backgroundView_];
         buttons_ = [[NSMutableArray alloc] initWithCapacity:6];
-        
+        [self registerForNotifications];
+        self.tag = CHTumblrMenuViewTag;
+        self.showDismissLabel = NO;
         
     }
     return self;
@@ -108,10 +118,10 @@
 {
     NSUInteger columnCount = 3;
     NSUInteger columnIndex =  index % columnCount;
-
+    
     NSUInteger rowCount = buttons_.count / columnCount + (buttons_.count%columnCount>0?1:0);
     NSUInteger rowIndex = index / columnCount;
-
+    
     CGFloat itemHeight = (CHTumblrMenuViewImageHeight + CHTumblrMenuViewTitleHeight) * rowCount + (rowCount > 1?(rowCount - 1) * CHTumblrMenuViewHorizontalMargin:0);
     CGFloat offsetY = (self.bounds.size.height - itemHeight) / 2.0;
     CGFloat verticalPadding = (self.bounds.size.width - CHTumblrMenuViewHorizontalMargin * 2 - CHTumblrMenuViewImageHeight * 3) / 2.0;
@@ -120,10 +130,10 @@
     offsetX += (CHTumblrMenuViewImageHeight+ verticalPadding) * columnIndex;
     
     offsetY += (CHTumblrMenuViewImageHeight + CHTumblrMenuViewTitleHeight + CHTumblrMenuViewVerticalPadding) * rowIndex;
-
+    
     
     return CGRectMake(offsetX, offsetY, CHTumblrMenuViewImageHeight, (CHTumblrMenuViewImageHeight+CHTumblrMenuViewTitleHeight));
-
+    
 }
 
 - (void)layoutSubviews
@@ -171,7 +181,7 @@
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
         btn.selectedBlock();
-
+        
     });
 }
 
@@ -180,8 +190,8 @@
 {
     NSUInteger columnCount = 3;
     NSUInteger rowCount = buttons_.count / columnCount + (buttons_.count%columnCount>0?1:0);
-
-
+    
+    
     for (NSUInteger index = 0; index < buttons_.count; index++) {
         CHTumblrMenuItemButton *button = buttons_[index];
         button.layer.opacity = 0;
@@ -199,7 +209,7 @@
         else if(columnIndex == 2) {
             delayInSeconds += CHTumblrMenuViewAnimationInterval * 2;
         }
-
+        
         CABasicAnimation *positionAnimation;
         
         positionAnimation = [CABasicAnimation animationWithKeyPath:@"position"];
@@ -212,8 +222,8 @@
         positionAnimation.delegate = self;
         
         [button.layer addAnimation:positionAnimation forKey:@"riseAnimation"];
-
-
+        
+        
         
     }
 }
@@ -226,8 +236,8 @@
         CGRect frame = [self frameForButtonAtIndex:index];
         NSUInteger rowIndex = index / columnCount;
         NSUInteger columnIndex = index % columnCount;
-
-        CGPoint toPosition = CGPointMake(frame.origin.x + CHTumblrMenuViewImageHeight / 2.0,frame.origin.y -  (rowIndex + 2)*200 + (CHTumblrMenuViewImageHeight + CHTumblrMenuViewTitleHeight) / 2.0);
+        
+        CGPoint toPosition = CGPointMake(frame.origin.x + CHTumblrMenuViewImageHeight / 2.0,frame.origin.y -  (rowIndex + 2)*(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ? 300.f : 200.f) + (CHTumblrMenuViewImageHeight + CHTumblrMenuViewTitleHeight) / 2.0);
         
         CGPoint fromPosition = CGPointMake(frame.origin.x + CHTumblrMenuViewImageHeight / 2.0,frame.origin.y + (CHTumblrMenuViewImageHeight + CHTumblrMenuViewTitleHeight) / 2.0);
         
@@ -254,7 +264,7 @@
         
         
     }
-
+    
 }
 
 - (void)animationDidStart:(CAAnimation *)anim
@@ -274,10 +284,10 @@
     else if([anim valueForKey:CHTumblrMenuViewDismissAnimationID]) {
         NSUInteger index = [[anim valueForKey:CHTumblrMenuViewDismissAnimationID] unsignedIntegerValue];
         NSUInteger rowIndex = index / columnCount;
-
+        
         UIView *view = buttons_[index];
         CGRect frame = [self frameForButtonAtIndex:index];
-        CGPoint toPosition = CGPointMake(frame.origin.x + CHTumblrMenuViewImageHeight / 2.0,frame.origin.y -  (rowIndex + 2)*200 + (CHTumblrMenuViewImageHeight + CHTumblrMenuViewTitleHeight) / 2.0);
+        CGPoint toPosition = CGPointMake(frame.origin.x + CHTumblrMenuViewImageHeight / 2.0,frame.origin.y -  (rowIndex + 2)*(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ? 300.f : 200.f) + (CHTumblrMenuViewImageHeight + CHTumblrMenuViewTitleHeight) / 2.0);
         
         view.layer.position = toPosition;
     }
@@ -291,11 +301,11 @@
     UIWindow *window;
     
     window = [UIApplication sharedApplication].keyWindow;
-   
-        
+    
+    
     appRootViewController = window.rootViewController;
     
- 
+    
     
     UIViewController *topViewController = appRootViewController;
     while (topViewController.presentedViewController != nil)
@@ -303,15 +313,57 @@
         topViewController = topViewController.presentedViewController;
     }
     
-    if ([topViewController.view viewWithTag:CHTumblrMenuViewTag]) {
-        [[topViewController.view viewWithTag:CHTumblrMenuViewTag] removeFromSuperview];
+    UIView *currentMenuView = [topViewController.view viewWithTag:CHTumblrMenuViewTag];
+    if (currentMenuView) {
+        UIView *currentDismissView = [currentMenuView viewWithTag:CHTumblrMenuViewDismissTag];
+        if (currentDismissView) {
+            [currentDismissView removeFromSuperview];
+        }
+        [currentMenuView removeFromSuperview];
     }
     
     self.frame = topViewController.view.bounds;
     [topViewController.view addSubview:self];
     
+    if (self.showDismissLabel) {
+        // Adding a dismiss button so dismissing is more obvious.
+        UILabel *dismissLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, self.bounds.size.height-29, self.bounds.size.width-40, 21)];
+        dismissLabel.backgroundColor = [UIColor clearColor];
+        dismissLabel.text = @"Dismiss";
+        dismissLabel.textAlignment = NSTextAlignmentCenter;
+        dismissLabel.textColor = [UIColor whiteColor];
+        dismissLabel.tag = CHTumblrMenuViewDismissTag;
+        [self addSubview:dismissLabel];
+    }
+    
     [self riseAnimation];
 }
 
+
+#pragma mark - Notifications
+
+- (void)registerForNotifications;
+{
+	NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+	[nc addObserver:self selector:@selector(deviceOrientationDidChange:)
+			   name:UIDeviceOrientationDidChangeNotification object:nil];
+}
+
+- (void)unregisterFromNotifications;
+{
+	[[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void)deviceOrientationDidChange:(NSNotification *)notification
+{
+	[self show];
+}
+
+#pragma mark - Cleanup
+
+- (void)dealloc
+{
+	[self unregisterFromNotifications];
+}
 
 @end

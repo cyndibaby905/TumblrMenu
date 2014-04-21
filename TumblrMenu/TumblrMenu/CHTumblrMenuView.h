@@ -24,11 +24,14 @@
 //  THE SOFTWARE.
 
 #import <UIKit/UIKit.h>
-typedef void (^CHTumblrMenuViewSelectedBlock)(void);
 
+typedef void (^CHTumblrMenuViewSelectedBlock)(void);
 
 @interface CHTumblrMenuView : UIView<UIGestureRecognizerDelegate>
 @property (nonatomic, readonly)UIImageView *backgroundImgView;
+@property (nonatomic, assign) BOOL showDismissLabel;
+
 - (void)addMenuItemWithTitle:(NSString*)title andIcon:(UIImage*)icon andSelectedBlock:(CHTumblrMenuViewSelectedBlock)block;
 - (void)show;
+
 @end
